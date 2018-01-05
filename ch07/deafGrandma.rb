@@ -7,11 +7,11 @@ while true
 		puts 'HUH?! SPEAK UP, SONNY!'
 
 	else
-		year = 1930 + rand(21) 
-
-		puts 'NO, NOT SINCE ' + year.to_s + '!'
+		if say != 'BYE'
+			year = 1930 + rand(21) 
+			puts 'NO, NOT SINCE ' + year.to_s + '!'
 		
-		if say == 'BYE'
+		else
 			puts 'BYE SONNY!'
 			break
 		end
