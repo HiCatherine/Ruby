@@ -2,7 +2,7 @@ number = 100
 
 while true
 	puts (number - 1).to_s + ' bottles of beer on the wall, ' + (number - 1).to_s + ' bottles of beer.'
-	puts 'Take one down and pass it around, ' + (number - 1).to_s + ' bottles of beer on the wall.'
+	puts 'Take one down and pass it around, ' + (number - 2).to_s + ' bottles of beer on the wall.'
 	puts ' '
 	number = number - 1 
 
