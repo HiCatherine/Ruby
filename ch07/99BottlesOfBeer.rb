@@ -1,14 +1,16 @@
 number = 100
 
-while true
+while number > 2
 	puts (number - 1).to_s + ' bottles of beer on the wall, ' + (number - 1).to_s + ' bottles of beer.'
-	puts 'Take one down and pass it around, ' + (number - 2).to_s + ' bottles of beer on the wall.'
+	str = ('Take one down and pass it around, ' + (number - 2).to_s) 
+		if number == 3 
+			puts str += ' bottle of beer on the wall.'
+		else
+			puts str += ' bottles of beer on the wall.'
+		end
+	
 	puts ' '
 	number = number - 1 
-
-	if number == 2 
-		break
-	end
 end
 
 puts '1 bottle of beer on the wall, 1 bottle of beer.'
