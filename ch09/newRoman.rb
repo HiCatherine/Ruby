@@ -1,12 +1,11 @@
-puts 'This program can show you numbers in old Roman numerals. 
+puts 'This program can display numbers in new Roman numerals. 
 Please enter an integer between 1 and 3000.'
 
-def Old_Roman number 
-
+def New_Roman number 
 	str = ' '
 
 	str += 'M'*(number/1000)
-	number = number - (number/1000)*1000z
+	number = number - (number/1000)*1000
 	
 
 	if number/100 == 9 || number/100 == 4
@@ -52,9 +51,9 @@ def Old_Roman number
 	end
 
 
-	puts str
+	return str
 
 end
 
 
-puts Old_Roman(1897)
+puts New_Roman(gets.chomp.to_i)
