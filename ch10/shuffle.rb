@@ -11,6 +11,8 @@ while true
 	end
 end
 
+
+# WAY 1: WITHOUT RECURSION
 def shuffle array
 	shuff array, []
 end
@@ -24,7 +26,7 @@ def shuff original, shuffled
 		shuffled = []
 		
 		original.each do |selected|
-			selected = original[rand(original.length)]
+			selected = original[rand(original.length - 1)]
 			shuffled.push selected
 			original -= [selected]
 		end
@@ -34,3 +36,27 @@ def shuff original, shuffled
 end
 
 puts(shuffle(list))
+
+
+
+
+# WAY 2: WITH RECURSION
+def shuffle2 array
+	recursive_shuffle array, []
+end
+
+def recursive_shuffle unshuffled, shuffled
+	if unshuffled.length == 0
+		return shuffled
+	else
+		random = unshuffled[rand(unshuffled.length)]
+		fewer = unshuffled - [random]
+		shuffled.push random
+
+		recursive_shuffle fewer, shuffled
+	end
+end
+
+puts(shuffle2(list))
+
+
